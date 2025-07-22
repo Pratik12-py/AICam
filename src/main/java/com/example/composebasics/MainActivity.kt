@@ -65,6 +65,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.example.composebasics.cameraxguide.LandmarkImageAnalyzer
@@ -135,6 +136,15 @@ class MainActivity : ComponentActivity() {
                         CameraPreview(
                             controller = controller,
                             modifier = Modifier.fillMaxSize())
+
+//                        if(analyzer.classifier==null){
+//                            Toast.makeText(LocalContext.current,"Instantiated",Toast.LENGTH_SHORT).show()
+//                        }
+//                        else{
+//
+//                                Toast.makeText(LocalContext.current,"Not Instantiated",Toast.LENGTH_SHORT).show()
+//
+//                        }
 
                         Column(
                             modifier = Modifier
